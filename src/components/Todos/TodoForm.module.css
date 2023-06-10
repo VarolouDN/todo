@@ -1,0 +1,33 @@
+.TodoForm{
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+}
+
+.block1{
+
+
+max-width: 30% ;
+    margin: 30px;
+    height: 30px;
+     width: 200px;
+
+   display: flex;
+}
+.block1 input{
+    border: 2px solid yellowgreen;
+}
+.block1 input:focus{
+    border: 2px solid blue;
+}
+
+.block2 {
+    display: flex;
+    margin: 30px;
+    height: 30px;
+    width: 100px;
+}
+
+.block2 button{
+    width:100px;
+}

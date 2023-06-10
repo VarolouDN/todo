@@ -1,0 +1,25 @@
+.todo {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+    border: 2px solid black;
+    margin: 50px;
+    background-color: yellowgreen;
+
+}
+.div{
+    padding: 20px;
+    height: 30px;
+    font-size: 20px;
+
+
+}
+
+.button{
+    margin: auto 30px auto auto ;
+    width: 15%;
+    height: 30px;
+
+}
