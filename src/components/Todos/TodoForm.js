@@ -1,21 +1,19 @@
-import styles from "./TodoForm.module.css"
+import styles from "./TodoForm.module.css";
 
-
-
-
-function TodoForm(props){
-
-
-    return (
-        <div className={styles.TodoForm}>
-           <div className={styles.block1}>
-            <input  type="text" value={props.value} onChange={props.onChangeInput}/>
-           </div>
-           <div className={styles.block2}>
-            <button onClick={props.onClickButton}>Click me</button>
-           </div>
-
-        </div>
-    )
+function TodoForm({ value, setValue, addTodo }) {
+  return (
+    <div className={styles.TodoForm}>
+      <div className={styles.block1}>
+        <input
+          type="text"
+          value={value}
+          onChange={(e) => setValue(e.target.value)}
+        />
+      </div>
+      <div className={styles.block2}>
+        <button onClick={addTodo}>Create </button>
+      </div>
+    </div>
+  );
 }
-export default TodoForm
+export default TodoForm;

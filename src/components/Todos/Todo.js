@@ -1,14 +1,30 @@
+import styles from "./Todo.module.css";
 
-import styles from "./Todo.module.css"
-function Todo(props){
+import { useState } from "react";
+import TodoUpdateElement from "./TodoUpdateElement";
+function Todo({ deleteTodo, value, id, updateTodo }) {
+  const [isTodoChanging, setIsTodoChanging] = useState(false);
 
-
+  if (isTodoChanging)
     return (
-     <div id={props.todo.id} className={styles.todo}>
+      <TodoUpdateElement
+        id={id}
+        value={value}
+        setIsTodoChanging={setIsTodoChanging}
+        updateTodo={updateTodo}
+      />
+    );
+  return (
+    <div className={styles.todo}>
+      <div className={styles.div}>{value}</div>
 
-         <div className={styles.div}>{props.todo.value}</div>
-         <button onClick={props.deleteTodo}  className={styles.button}>Done</button>
-     </div>
-    )
+      <button className={styles.update} onClick={() => setIsTodoChanging(true)}>
+        Update
+      </button>
+      <button onClick={() => deleteTodo(id)} className={styles.delete}>
+        X
+      </button>
+    </div>
+  );
 }
-export default  Todo
+export default Todo;

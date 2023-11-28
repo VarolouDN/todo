@@ -1,33 +1,86 @@
-.TodoForm{
-    display: flex;
-    flex-direction:row;
-    justify-content: center;
+.TodoForm {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
-.block1{
+.block1 {
+  max-width: 50%;
+  margin: 30px;
+  height: 30px;
+  width: 50%;
 
-
-max-width: 30% ;
-    margin: 30px;
-    height: 30px;
-     width: 200px;
-
-   display: flex;
+  display: flex;
 }
-.block1 input{
-    border: 2px solid yellowgreen;
+.block1 input {
+  border: 3px solid yellowgreen;
+  display: inline-block;
+  width: 100%;
+  border-radius: 10px;
+  height: 30px;
+  font-size: large;
 }
-.block1 input:focus{
-    border: 2px solid blue;
+.block1 input:focus {
+  outline: none;
+  border: 3px solid red;
 }
 
 .block2 {
-    display: flex;
-    margin: 30px;
-    height: 30px;
-    width: 100px;
+  display: flex;
+  margin: 30px;
+  height: 30px;
+  width: 30%;
 }
 
-.block2 button{
-    width:100px;
+.block2 button {
+  font-size: large;
+  color: yellowgreen;
+  width: 70%;
+  border-radius: 10px;
+  background-color: yellow;
+  border: 1px rgb(182, 182, 96) solid;
+  height: 35px;
+}
+
+.block2 button:hover {
+  background-color: rgba(240, 240, 111, 0.544);
+  cursor: pointer;
+}
+
+.block2 button:active {
+  background-color: yellow;
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .block1 input {
+    border: 2px solid yellowgreen;
+    display: inline-block;
+    width: 100%;
+    border-radius: 10px;
+    height: 30px;
+    font-size: medium;
+  }
+  .block2 button {
+    font-size: medium;
+  }
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .block1 {
+    max-width: 50%;
+    /*  margin: 30px;*/
+    height: 30px;
+    width: 50%;
+
+    display: flex;
+  }
+  .block1 input {
+    border: 2px solid yellowgreen;
+    display: inline-block;
+    width: 100%;
+    border-radius: 10px;
+    height: 30px;
+    font-size: small;
+  }
+  .block2 button {
+    font-size: small;
+  }
 }

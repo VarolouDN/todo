@@ -1,0 +1,25 @@
+.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 4px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.pagination li {
+  list-style: none;
+}
+
+.page_button {
+  width: 25px;
+  background-color: beige;
+}
+.page_button:hover {
+  cursor: pointer;
+  background-color: rgb(122, 122, 12);
+  color: white;
+}
+.page_button.activeButton {
+  background-color: rgb(122, 122, 12);
+  color: white;
+}

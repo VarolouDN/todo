@@ -1,0 +1,114 @@
+.todo {
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between;*/
+  align-items: center;
+  gap: 5px;
+  /*text-align: center;*/
+  border: 1px whitesmoke solid;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: azure;
+}
+
+.block1 {
+  width: 100%;
+  align-items: center;
+  /*position: relative;*/
+  /*  margin-bottom: 40px;*/
+}
+
+.block1 div {
+  box-sizing: border-box;
+  border: 2px solid yellowgreen;
+  display: flex;
+  flex-direction: row;
+  width: 99%;
+  border-radius: 10px;
+  height: 50px;
+  font-size: large;
+  justify-content: space-between;
+
+  margin-left: 5px;
+  align-items: center;
+}
+.block1 div input {
+  border: 3px solid rgb(189, 215, 135);
+  display: block;
+  width: 75%;
+  border-radius: 10px;
+  height: 44px;
+  font-size: large;
+  /* position: absolute;*/
+}
+
+.block1 div input:focus {
+  outline: none;
+  border: 3px solid red;
+}
+
+.block2 {
+  display: flex;
+  margin: 30px;
+  height: 30px;
+  width: 30%;
+  margin-top: auto;
+}
+
+.update {
+  font-size: large;
+  color: yellowgreen;
+  width: 20%;
+  border-radius: 10px;
+  background-color: yellow;
+  border: 3px rgb(182, 182, 96) solid;
+  height: 44px;
+  /*position: absolute;
+  z-index: 100;*/
+  right: 1px;
+  /*top: 3px;
+  bottom: 3px;*/
+}
+
+.update:hover {
+  background-color: rgba(240, 240, 111, 0.544);
+  cursor: pointer;
+}
+
+.update:active {
+  background-color: yellow;
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .update {
+    width: 20%;
+    font-size: medium;
+  }
+  .block1 div input {
+    border: 2px solid rgb(189, 215, 135);
+    display: block;
+    width: 75%;
+    border-radius: 10px;
+    height: 44px;
+    font-size: medium;
+    /* position: absolute;*/
+  }
+
+  .block1 div input:focus {
+    outline: none;
+    border: 2px solid red;
+  }
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .update {
+    font-size: small;
+  }
+  .block1 div input {
+    font-size: small;
+    /* position: absolute;*/
+  }
+
+  .block1 div input:focus {
+  }
+}

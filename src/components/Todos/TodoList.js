@@ -1,19 +1,14 @@
-import Todo from "./Todo";
+import { Children } from "react";
 
-function TodoList(props){
-
-
-
-    return (
-
-        <div>
-            {props.todos.length>0 && props.todos.map((todo)=>{
-
-                return <Todo deleteTodo={props.deleteTodo}  key={todo.id} todo={todo}/>
-            })}
-
-        </div>
-    )
-
+function TodoList(/*todos, deleteTodo, updateTodo*/ { children }) {
+  return (
+    <div className="">
+      {
+        /*todos.map((todo) => {
+        return <Todo deleteTodo={deleteTodo} key={todo.id} {...todo} />;
+      })*/ children
+      }
+    </div>
+  );
 }
-export default TodoList
+export default TodoList;
